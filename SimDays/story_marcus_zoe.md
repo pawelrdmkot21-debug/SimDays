@@ -9,75 +9,45 @@ Notation:
 
 ---
 
-# MARCUS REYES — the roommate
-
+MARCUS REYES — the roommate
 Met Day 1. Friendship/bro arc. Found: mornings home/park, evenings at Static (bar). Interests: basketball, cooking, old action movies. Helps you settle in; later his own arc (wants to open a bar).
 
-## SCENE M0 — Move-in day (intro, scripted, Day 1)
+SCENE M0 — Move-in day (intro, scripted, Day 1)
+[bg: apartment_staircase]
 
-*[bg: cheaphouse_day]*
+The hallway is quiet. Old wooden stairs creak beneath your feet, and the faint smell of fresh paint mixes with someone's dinner cooking nearby. You stop in front of Apartment 12. It's not much... Just a small studio apartment. But for now, it's home. As you reach for your keys, you hear footsteps behind you.
 
-*You shoulder the door open, a duffel bag in one hand. The key sticks in the lock — you have to jiggle it twice before it turns.*
+A guy about your age with an easy grin turns the corner of the stairs, a dish towel over one shoulder.
 
-You: *(muttering)* Come on… there we go.
+MARCUS: Oh! You must be the new neighbor. I don't think we've met before. I'm Marcus.
 
-*The studio is small. A bed, a desk, a kitchenette. Boxes you haven't unpacked. It smells like fresh paint and someone else's old coffee.*
+▸ "Nice to meet you. Yeah... I just moved in today." (Earnest)
+→ MARCUS +3 Affection.
+▸ "Is it that obvious? I thought the heavy sighing gave it away." (Sarcastic)
+→ MARCUS +2 Affection (he laughs).
+▸ "Yeah. Just trying to figure out the lock." (Reserved)
+→ neutral.
 
-You: So this is it. Home.
+MARCUS: Welcome to the building! Apartment 12, huh? Small place... but it's surprisingly cozy. We've all started somewhere.
 
-*A knock — not on your door, on the wall. Then footsteps in the hall, and a face leans into your open doorway: a guy about your age, easy grin, dish towel over one shoulder.*
+▸ "I hope so. Everything still feels a little overwhelming." (Earnest)
+→ MARCUS +2 Trust.
+▸ "Cozy is a nice word for it. 'Glorified closet' also works, but I'll take it." (Sarcastic)
+→ MARCUS +3 Affection.
+▸ "It'll do for now. It's a roof over my head." (Reserved)
+→ neutral.
 
-MARCUS: Hey — new blood! Heard the key fight through the wall. That lock's a jerk, you gotta lift the handle while you turn it.
+MARCUS: Trust me, you'll settle in faster than you think. The people around here are friendly. If you ever need anything, just knock on my door. Apartment 14.
 
-▸ "Thanks. I'm still figuring the place out."
-  → MARCUS +3 Affection. Continues warm.
-▸ "I had it handled."
-  → MARCUS +1 Affection (he laughs it off). Slightly cooler banter.
-▸ *(say nothing, just nod)*
-  → neutral.
+You: Thanks, Marcus. I really appreciate it.
 
-MARCUS: Marcus. Marc. I'm right next door — 4B. Lived here two years, so if the hot water does the cold-then-boiling thing, that's normal, just ride it out.
+MARCUS: No problem. Oh, and one more thing... If you're looking for a job, check out the cafés downtown. They're almost always hiring.
 
-You: *(introduce yourself)*
+(This is the soft nudge toward Zoe's café / first job.)
 
-MARCUS: Good to meet you, man. Moving's the worst. You eat yet? I've got half a pot of chili doing nothing.
+MARCUS: Anyway... Welcome to the neighborhood. See you around!
 
-▸ "Yeah, actually — that'd be great." → MARCUS +5 Affection, +2 Trust. Flag `marcus_chili = True`. → go M0a.
-▸ "I'm good, gotta unpack. Rain check?" → MARCUS +2 Affection. Flag `marcus_raincheck = True`. → skip to M0b.
-▸ "I don't really know you, man." → MARCUS +0 (respects it, a little stung). → skip to M0b.
-
-### M0a — chili
-*[show: marcus_neutral at right] (needs Marcus sprite — see asset note)*
-
-MARCUS: Pull up a box, we don't have chairs yet apparently.
-
-*You eat. He talks — fast, friendly, the kind of guy who knows everyone's name.*
-
-MARCUS: So what's the plan? Nobody moves to this city for the weather.
-
-▸ "Honestly? Figuring that out." → MARCUS: "Respect. Most people lie and say they have it all mapped. You'll be fine." +2 Trust.
-▸ "Make something of myself." → MARCUS: "Ha — that's the spirit. This town'll test you on it, though." +2 Affection.
-▸ "Money. Plain and simple." → MARCUS: "Hey, no shame. Stick around, I'll point you at who's hiring." +1 Affection, sets `marcus_jobtips = True`.
-
-MARCUS: Tell you what. You need anything — a name, a couch, twenty bucks till payday — you knock. That's the deal here.
-
-→ Sets `marcus_met = True`, unlocks Marcus as a contact. Continue to M0c.
-
-### M0b — rain check
-MARCUS: No worries. Door's 4B when you're hungry — or bored. Welcome to the building.
-
-→ Sets `marcus_met = True`. Continue to M0c.
-
-### M0c — close
-MARCUS: Oh — one thing. You'll want money before rent hits. There's a café downtown, "Grounds," always short-staffed. Tell 'em you can carry a tray, they'll take you.
-
-*(This is the soft nudge toward Zoe's café / first job.)*
-
-You: Noted. Thanks, Marc.
-
-MARCUS: Anytime, neighbor.
-
-*[hide marcus] → return to apartment action menu.*
+[hide marcus] → Sets marcus_met = True. Return to apartment action menu.
 
 ---
 
